@@ -9,14 +9,29 @@
 import SpriteKit
 
 class GameScene: SKScene {
+    
+    var gameScore: SKLabelNode!
+    var score: Int = 0 {
+        didSet {
+            gameScore.text = "Score: \(score)"
+        }
+    }
+    
+    
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!"
-        myLabel.fontSize = 45
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
+        let background = SKSpriteNode(imageNamed: "whackBackground")
+        background.position = CGPoint(x: 512, y: 384)
+        background.blendMode = .Replace
+        background.zPosition = -1
+        addChild(background)
         
-        self.addChild(myLabel)
+        gameScore = SKLabelNode(fontNamed: "Chalduster")
+        gameScore.text = "Score: 0"
+        gameScore.position = CGPoint(x: 8, y: 8)
+        gameScore.horizontalAlignmentMode = .Left
+        gameScore.fontSize = 48
+        addChild(gameScore)
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {

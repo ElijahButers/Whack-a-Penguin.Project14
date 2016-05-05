@@ -58,4 +58,11 @@ class GameScene: SKScene {
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
     }
+    
+    func createSlotAt(pos: CGPoint) {
+        let slot = WhackSlot()
+        slot.configureAtPosition(pos)
+        addChild(slot)
+        slots.append(slot)
+    }
 }

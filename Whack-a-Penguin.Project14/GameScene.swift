@@ -10,6 +10,7 @@ import SpriteKit
 
 class GameScene: SKScene {
     
+    var slots = [WhackSlot]()
     var gameScore: SKLabelNode!
     var score: Int = 0 {
         didSet {

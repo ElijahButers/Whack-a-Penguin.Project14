@@ -10,5 +10,12 @@ import SpriteKit
 import UIKit
 
 class WhackSlot: SKNode {
+    
+    func configureAtPosition(pos: CGPoint) {
+        position = pos
+        
+        let sprite = SKSpriteNode(imageNamed: "whackHole")
+        addChild(sprite)
+    }
 
 }

@@ -12,6 +12,8 @@ import UIKit
 class WhackSlot: SKNode {
     
     var charNode: SKSpriteNode!
+    var visible = false
+    var isHit = false
     
     func configureAtPosition(pos: CGPoint) {
         position = pos

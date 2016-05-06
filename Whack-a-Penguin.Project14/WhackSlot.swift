@@ -11,6 +11,8 @@ import UIKit
 
 class WhackSlot: SKNode {
     
+    var charNode: SKSpriteNode!
+    
     func configureAtPosition(pos: CGPoint) {
         position = pos
         

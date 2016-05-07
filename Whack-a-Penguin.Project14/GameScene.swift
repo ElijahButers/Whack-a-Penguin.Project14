@@ -7,6 +7,7 @@
 //
 
 import SpriteKit
+import GameplayKit
 
 class GameScene: SKScene {
     
@@ -74,4 +75,5 @@ class GameScene: SKScene {
         RunAfterDelay(RandomDouble(min: minDelay, max: maxDelay)) { [ unowned self] in
             self.createEnemy()
         }
+    }
 }

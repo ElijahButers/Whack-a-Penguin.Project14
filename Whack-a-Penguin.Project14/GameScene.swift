@@ -56,4 +56,22 @@ class GameScene: SKScene {
         addChild(slot)
         slots.append(slot)
     }
+    
+    func createEnemy() {
+        popupTime *= 0.991
+        
+        slots = GKRandomSource.sharedRandom().arrayByShufflingObjectsInArray(slots) as! [WhackSlot]
+        slots[0].show(hideTime: popupTime)
+        
+        if RandomInt(min: 0, max: 12) > 4 { slots[1].show(hideTime: popupTime) }
+        if RandomInt(min: 0, max: 12) > 8 { slots[2].show(hideTime: popupTime) }
+        if RandomInt(min: 0, max: 12) > 10 { slots[3].show(hideTime: popupTime) }
+        if RandomInt(min: 0, max: 12) > 11 { slots[4].show(hideTime: popupTime) }
+        
+        let minDelay = popupTime / 2.0
+        let maxDelay = popupTime * 2
+        
+        RunAfterDelay(RandomDouble(min: minDelay, max: maxDelay)) { [ unowned self] in
+            self.createEnemy()
+        }
 }

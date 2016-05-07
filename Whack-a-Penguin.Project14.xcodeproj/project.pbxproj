@@ -29,6 +29,7 @@
 		E2F56A211CDA637F0023F853 /* whackMask.png in Resources */ = {isa = PBXBuildFile; fileRef = E2F56A131CDA637F0023F853 /* whackMask.png */; };
 		E2F56A221CDA637F0023F853 /* whackMask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2F56A141CDA637F0023F853 /* whackMask@2x.png */; };
 		E2F56A241CDA6D5C0023F853 /* WhackSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F56A231CDA6D5C0023F853 /* WhackSlot.swift */; };
+		E2FF98D31CDDF4C00064FD14 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FF98D21CDDF4C00064FD14 /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		E2F56A131CDA637F0023F853 /* whackMask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whackMask.png; sourceTree = "<group>"; };
 		E2F56A141CDA637F0023F853 /* whackMask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whackMask@2x.png"; sourceTree = "<group>"; };
 		E2F56A231CDA6D5C0023F853 /* WhackSlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhackSlot.swift; sourceTree = "<group>"; };
+		E2FF98D21CDDF4C00064FD14 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				E2F569F21CDA5BF20023F853 /* GameScene.swift */,
 				E2F56A231CDA6D5C0023F853 /* WhackSlot.swift */,
 				E2F569F41CDA5BF20023F853 /* GameViewController.swift */,
+				E2FF98D21CDDF4C00064FD14 /* Helper.swift */,
 				E2F569F61CDA5BF20023F853 /* Main.storyboard */,
 				E2F56A041CDA5D5F0023F853 /* Assets.xcassets */,
 				E2F56A061CDA637F0023F853 /* Content */,
@@ -211,6 +214,7 @@
 			files = (
 				E2F569F31CDA5BF20023F853 /* GameScene.swift in Sources */,
 				E2F569F51CDA5BF20023F853 /* GameViewController.swift in Sources */,
+				E2FF98D31CDDF4C00064FD14 /* Helper.swift in Sources */,
 				E2F56A241CDA6D5C0023F853 /* WhackSlot.swift in Sources */,
 				E2F569EF1CDA5BF20023F853 /* AppDelegate.swift in Sources */,
 			);
@@ -362,6 +366,7 @@
 				E2F56A031CDA5BF20023F853 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

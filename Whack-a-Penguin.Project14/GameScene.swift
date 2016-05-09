@@ -40,6 +40,9 @@ class GameScene: SKScene {
         for i in 0 ..< 4 { createSlotAt(CGPoint(x: 180 + (i + 170), y: 320)) }
         for i in 0 ..< 5 { createSlotAt(CGPoint(x: 100 + (i + 170), y: 230)) }
         for i in 0 ..< 5 { createSlotAt(CGPoint(x: 180 + (i + 170), y: 140)) }
+        
+        RunAfterDelay(1) { [unowned self] in
+            self.createEnemy()
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {

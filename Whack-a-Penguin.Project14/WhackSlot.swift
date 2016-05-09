@@ -48,5 +48,12 @@ class WhackSlot: SKNode {
             charNode.name = "charEnemy"
         }
     }
+    
+    func hide() {
+        if !visible { return }
+        
+        charNode.runAction(SKAction.moveByX(0, y: -80, duration: 0.05))
+        visible = false
+    }
 
 }

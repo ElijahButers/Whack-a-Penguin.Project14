@@ -44,6 +44,7 @@ class GameScene: SKScene {
         RunAfterDelay(1) { [unowned self] in
             self.createEnemy()
     }
+    }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
        /* Called when a touch begins */

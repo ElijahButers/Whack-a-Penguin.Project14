@@ -48,6 +48,18 @@ class GameScene: SKScene {
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
        /* Called when a touch begins */
+        if let touch = touches.first {
+            let location = touch.locationInNode(self)
+            let nodes = nodesAtPoint(location)
+            
+            for node in nodes {
+                if node.name == "charFriend" {
+                    // they shouldn't have whacked this penguin
+                } else if node.name == "charEnemy" {
+                    // they should have whacked this one
+                }
+            }
+        }
         
     }
    

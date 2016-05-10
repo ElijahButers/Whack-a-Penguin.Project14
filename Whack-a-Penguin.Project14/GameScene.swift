@@ -54,6 +54,7 @@ class GameScene: SKScene {
             
             for node in nodes {
                 if node.name == "charFriend" {
+                    
                     let whackSlot = node.parent!.parent as! WhackSlot
                     if !whackSlot.visible { continue }
                     if whackSlot.isHit { continue }
@@ -62,7 +63,16 @@ class GameScene: SKScene {
                     
                     runAction(SKAction.playSoundFileNamed("whackBad.caf", waitForCompletion: false))
                 } else if node.name == "charEnemy" {
-                    // they should have whacked this one
+                    
+                    let whackSlot = node.parent!.parent as! WhackSlot
+                    if !whackSlot.visible { continue }
+                    if whackSlot.isHit { continue }
+                    whackSlot.charNode.xScale = 0.85
+                    whackSlot.charNode.yScale = 0.85
+                    whackSlot.hit()
+                    score += 1
+                    
+                    runAction(SKAction.playSoundFileNamed("whack.caf", waitForCompletion: false))
                 }
             }
         }

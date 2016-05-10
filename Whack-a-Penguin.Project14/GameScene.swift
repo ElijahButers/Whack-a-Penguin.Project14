@@ -54,7 +54,13 @@ class GameScene: SKScene {
             
             for node in nodes {
                 if node.name == "charFriend" {
-                    // they shouldn't have whacked this penguin
+                    let whackSlot = node.parent!.parent as! WhackSlot
+                    if !whackSlot.visible { continue }
+                    if whackSlot.isHit { continue }
+                    whackSlot.hit()
+                    score -= 5
+                    
+                    runAction(SKAction.playSoundFileNamed("whackBad.caf", waitForCompletion: false))
                 } else if node.name == "charEnemy" {
                     // they should have whacked this one
                 }
